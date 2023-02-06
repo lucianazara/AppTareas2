@@ -6,9 +6,11 @@
 
 :root {
     --verde-claro:  rgba(188,209,136,0.5);
+    --verde-clarimedio: rgba(170,190,113,255);
     --verde-medio:  rgb(71,77,27);
     --verde-oscuro: rgba(71,77,27, 0.9);
     --blanco-amarillento: rgba(239,233,219,255);
+    --amarillo-claro: rgba(231,240,174,255);
     --gris-oscuro: rgb(34,34,42);
     --gris: rgba(90,91,99,255);
     --gris-claro: rgba(170,170,175,255);
@@ -16,32 +18,40 @@
 }
 
 .modo-oscuro {
-    --nav-color: var(--negro);
-    --color-fondo: var(--gris-oscuro);
+    --nav-color: var(--gris);
+    --color-fondo: var(--gris);
     --color-texto: var(--blanco);
     --color-borde: var(--gris-oscuro);
     --color-modal: var(--gris-claro);
-    --color-hover: var(--gris);
+    --color-hover: var(--gris-claro);
     --color-hover-texto: var(--blanco);
+    --color-hover-titulo: var(--gris-claro);
+    background-image: url("img/backgound-img-dark.jpg");
 }
+
 .modo-claro {
-    --nav-color: var(--verde-medio);
+    --nav-color: var(--verde-claro);
     --color-fondo: var(--verde-claro);
     --color-texto: var(--verde-oscuro);
+    --color-texto-claro: var(--blanco-amarillento);
     --color-borde: var(--verde-oscuro);
     --color-modal: var(--blanco-amarillento);
-    --color-hover: var(--verde-oscuro);
-    --color-hover-texto: var(--blanco-amarillento);
+    --color-hover: var(--verde-clarimedio);
+    --color-hover-texto: var(--amarillo-claro);
+    --color-hover-titulo: var(--blanco-amarillento);
+    background-image: url("img/backgound-img.jpg");
 }
+
 body {
     background-image: url("img/backgound-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+
 #nav-bar {
     height: 70px;
-    background-color: #c1d08f;
+    background-color: var(--nav-color);
     display: flex;
     align-items: center;
     justify-content: end;
@@ -59,14 +69,14 @@ body {
 
 h1 {
     padding: 1rem;
-    color:#0a1202;
+    color: var(--color-texto);
     padding-right: 2rem;
 }
 
 h1:hover{
     translate: -5px;
     transition-duration: 1s;
-    color: var(--color-hover-texto);
+    color: var(--color-hover-titulo);
 }
 
 .form-tareas {
@@ -94,7 +104,7 @@ h1:hover{
     background-color: var(--color-modal);
     padding: 2rem;
     border-radius: 15px;
-    border: 1px black solid;
+    border: var(--color-borde);
     position: relative;
     top: 25%;
     /* left: %; */
@@ -159,7 +169,8 @@ input {
     /* top: 30%;
     left: 50%; */
     /* transform: translate(-50%, -50%); */
-    background-color: #e7e2d2;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 #btn-agregar:hover {
@@ -211,6 +222,7 @@ main {
     padding: 2rem;
     text-align: center;
     display: flex;
+    color: var(--color-texto);
 
 }
 .tareas-contenedor-chico {

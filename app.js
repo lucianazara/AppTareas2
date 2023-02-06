@@ -10,19 +10,19 @@ let botonModoOscuro = $("#btn-modo-oscuro")
 
 window.addEventListener("load", function(){
 
-window.addEventListener("load", ()=>{
-    document.classList.add("modo-oscuro");
-})
-
 
 botonModoOscuro.addEventListener("click", function(){
-    document.body.classList.add("modo-claro");
-    if(botonModoOscuro.innerHTML == "Modo oscuro"){
+    document.body.classList.remove("modo-claro");
+    document.body.classList.add("modo-oscuro");
+    if(botonModoOscuro.innerHTML == "Modo claro"){
         document.body.classList.add("modo-claro");
-        botonModoOscuro.innerHTML = "Modo claro";
+        botonModoOscuro.innerHTML = "Modo oscuro";
+    
+
     } else {
         document.body.classList.remove("modo-claro");
-        botonModoOscuro.innerHTML = "Modo oscuro";
+        botonModoOscuro.innerHTML = "Modo claro";
+      
     }
 })
 
