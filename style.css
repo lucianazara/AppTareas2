@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-claro:  rgba(188,209,136,0.5);
+    --verde-medio:  rgb(71,77,27);
+    --verde-oscuro: rgba(71,77,27, 0.9);
+    --blanco-amarillento: rgba(239,233,219,255);
+    --gris-oscuro: rgb(34,34,42);
+    --gris: rgba(90,91,99,255);
+    --gris-claro: rgba(170,170,175,255);
+    --blanco: rgba(250,250,252,255);
+}
+
+.modo-oscuro {
+    --nav-color: var(--negro);
+    --color-fondo: var(--gris-oscuro);
+    --color-texto: var(--blanco);
+    --color-borde: var(--gris-oscuro);
+    --color-modal: var(--gris-claro);
+    --color-hover: var(--gris);
+    --color-hover-texto: var(--blanco);
+}
+.modo-claro {
+    --nav-color: var(--verde-medio);
+    --color-fondo: var(--verde-claro);
+    --color-texto: var(--verde-oscuro);
+    --color-borde: var(--verde-oscuro);
+    --color-modal: var(--blanco-amarillento);
+    --color-hover: var(--verde-oscuro);
+    --color-hover-texto: var(--blanco-amarillento);
+}
+body {
+    background-image: url("img/backgound-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#nav-bar {
+    height: 70px;
+    background-color: #c1d08f;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#btn-modo-oscuro {
+    padding: .5rem;
+    border-radius: 50px;
+}
+
+#btn-modo-oscuro:hover {
+    background-color: var(--color-hover);
+    color: var(--color-hover-texto);
+}
+
+h1 {
+    padding: 1rem;
+    color:#0a1202;
+    padding-right: 2rem;
+}
+
+h1:hover{
+    translate: -5px;
+    transition-duration: 1s;
+    color: var(--color-hover-texto);
+}
+
+.form-tareas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+} 
+
+.modal-contenedor {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: var(--color-fondo);
+    top: 0;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1.5s ease-in-out;
+}
+
+.modal-contenedor .modal {
+    height: 20rem;
+    width: 50rem;
+    background-color: var(--color-modal);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px black solid;
+    position: relative;
+    top: 25%;
+    /* left: %; */
+    box-shadow: 0px 0px 15px 0 var(--color-borde);
+}
+
+.modal-mostrar {
+    pointer-events: all;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+form {
+    font-size: 2rem;
+    display: flex;
+    padding: 1rem;
+
+}
+
+input {
+    font-size: 1rem;
+    border-radius: 25px;
+    height: 2.5rem;
+    width: 20rem;
+    padding: 1rem;
+}
+
+#estado {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 25px;
+    text-align: center;
+    margin: 1rem;
+
+}
+
+.submit {
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 50px;
+}
+
+.submit:hover {
+    background-color: var(--color-hover);
+}
+/* .agregar-tareas {
+    /* position: relative; */
+    /* display: flex;
+    height: 200px;
+    width: 200px; */
+/* } */ 
+
+#btn-agregar {
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    /* position: absolute; */
+    /* top: 30%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    background-color: #e7e2d2;
+}
+
+#btn-agregar:hover {
+    background-color: var(--color-hover);
+    color: var(--color-hover-texto);
+    cursor: pointer;
+    box-shadow: 0px 3px 3px;
+    color: var(--color-hover-texto);
+}
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+/* h3 {
+    height: 10%;
+    padding: 0.2rem;
+    text-align: center;
+} */
+/* .tareas-contenedor {
+    width: 80%;
+    height: 60%;
+    border: black;
+    display: table-column;
+    justify-content: center;
+    background-color: #979152; 
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    color: black;
+ 
+} */
+
+/* .tareas-titulo {
+    height: 3rem;
+    border: solid black;
+    padding: 2rem;
+    display: table-row;
+
+} */
+
+
+.tareas-contenedor {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+
+}
+.tareas-contenedor-chico {
+    /* float: left; */
+    width: 33.33%;
+    height: 300px;
+    background-color: var(--color-fondo);
+    outline: solid var(--color-borde);
+    padding: 10px;
+} 
+
+.tareas-contenedor:after{
+    content: "";
+    display: table;
+    clear: both;
+}

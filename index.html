@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <button id="btn-modo-oscuro">Modo oscuro</button>
+        <h1>App Tareas</h1>
+    </nav>
+      <section class="section-create">
+        <button id="btn-agregar">Agregar tarea</button>
+        <section class="modal-contenedor">
+            <div class="modal">
+                <button id="modal-cerrar">X</button>
+                <form class="form">
+                    <div>
+                        <input id="titulo-tarea" type="text" placeholder="Titulo de tarea">
+                        <span id="titulo-error"></span>
+                    </div>
+                    <div>
+                        <select id="estado">
+                            <option value="" disabled selected>Seleccione un estado</option>
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="En progreso">En progreso</option>
+                            <option value="Terminado">Terminado</option>
+                        </select>
+                        <span id="stateErrors"></span>       
+                    </div>
+                    <button type="submit" class="submit">Crear</button>
+                </form>
+            </div>
+        </section>
+    </section>
+      <!-- <div class="agregar-tareas"></div>
+      <button id="btn-agregar"> AGREGAR TAREA </button>
+    </div> -->
+    <main>
+    <div class="tareas-contenedor">
+        <div class="tareas-contenedor-chico">
+            <h3>Tareas pendientes</h3>
+            <p id="tareas-pendientes"> Tareas tareas tareas </p>
+    </div>
+        <div class="tareas-contenedor-chico">
+            <h3>Tareas en progreso</h3>
+            <p> Tareas tareas tareas </p>
+    </div>
+        <div class="tareas-contenedor-chico">
+            <h3>Tareas terminadas</h3>
+            <p> Tareas tareas tareas </p>
+    </div>
+</div> 
+</main>
+    <script src="app.js"></script>
+</body>
+</html>
