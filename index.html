@@ -16,7 +16,6 @@
         <button id="btn-agregar">Agregar tarea</button>
         <section class="modal-contenedor">
             <div class="modal">
-                <button id="modal-cerrar">X</button>
                 <form class="form">
                     <div>
                         <input id="titulo-tarea" type="text" placeholder="Titulo de tarea">
@@ -29,9 +28,10 @@
                             <option value="En progreso">En progreso</option>
                             <option value="Terminado">Terminado</option>
                         </select>
-                        <span id="stateErrors"></span>       
+                        <span id="mensajeError">Holis</span>       
                     </div>
                     <button type="submit" class="submit">Crear</button>
+                    <button id="modal-cerrar">X</button>
                 </form>
             </div>
         </section>
